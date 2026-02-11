@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Width from './width';
 
 interface Sparkle {
   id: number
@@ -63,7 +64,8 @@ export function ValentineAnimation() {
   }
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-gradient-to-b from-pink-50 via-rose-50 to-pink-50 flex items-center justify-center">
+    <Width className="mx-auto">
+    <div className="relative w-full h-screen overflow-hidden  flex items-center justify-center">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating hearts background */}
@@ -109,7 +111,7 @@ export function ValentineAnimation() {
             key="scene-0"
             className="absolute inset-0 flex flex-col items-center justify-center animate-fade-in-scale"
           >
-             <p className=" animate-pulse md:mt-5  text-5xl font-bold text-rose-600 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+             <p className=" animate-pulse md:mt-5  text-5xl font-bold text-rose-600 top-1/2 left-1/2 -translate-x-1/3 md:-translate-x-1/2 -translate-y-1/2">
              FALAK
              💕
              </p>
@@ -188,7 +190,7 @@ export function ValentineAnimation() {
               Love is in the Air
             </h2>
             <p className="text-lg text-rose-500 text-center max-w-md animate-fade-in-up">
-              Surrounded by endless affection and warmth
+              Surrounded by endless affection and warmth.To my forever Valentine: I love you!💓😍
             </p>
           </div>
         )}
@@ -320,5 +322,6 @@ export function ValentineAnimation() {
         }
       `}</style>
     </div>
+    </Width>
   )
 }
